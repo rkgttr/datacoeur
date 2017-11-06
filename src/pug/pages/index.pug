@@ -1,0 +1,53 @@
+extends ../layouts/default
+
+block content
+  canvas.deco(id='c')
+  .preloader-container
+    .preloader
+      .slice
+      .slice
+      .slice
+      .slice
+      .slice
+      .slice
+  form.request
+    label.keyword(for='request') Une marque, un produit, ...
+    .request-key
+      input(list='brands' type='text' id='request' name='request' placeholder='Coca-Cola, parfum, ...' required)
+      datalist#brands
+        option(value='mixa-bébé')
+        option(value='cadum')
+        option(value='cadum+mixa-bébé')
+      button(type='submit') OK
+    h2 Période
+    .timerange
+      input(type='radio' name='timerange' id='week' checked)
+      label(for='week') Semaine
+      input(type='radio' name='timerange' id='month')
+      label(for='month') Mois
+      input(type='radio' name='timerange' id='season')
+      label(for='season') Saison
+      input(type='radio' name='timerange' id='year')
+      label(for='year') Année
+    .datasource
+      h2 Source des données
+      input(type='checkbox' id='social' name='social' checked)
+      label(for='social') Réseaux sociaux
+      input(type='checkbox' id='press' name='press' checked)
+      label(for='press') Presse
+      input(type='checkbox' id='forums' name='forums' checked)
+      label(for='forums') Forums
+      input(type='checkbox' id='panels' name='panels' checked)
+      label(for='panels') Panel (GWI)
+  .graph
+  .details
+    h2
+    .profiles
+      h3 Profils
+      p Profils des personnes ayant eu cette réponse émotionnelle.
+      .graphs
+    .syntagmes
+      h3 syntagmes
+      p Les cinq syntagmes suivants sont les plus significatives entités syntaxiques et sémantiques représentatives de la réponse émotionnelle.
+      .cloud
+    

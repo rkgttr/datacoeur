@@ -1,0 +1,43 @@
+footer {
+	padding: 3rem;
+  background: rgba($black, .9);
+  color: $light;
+  .footer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media #{$medium} {
+      width: 75%;
+    }
+    @media #{$large} {
+      width: 50%;
+    }
+  }
+  p {
+    @include plumber( $font-size: 1.5);
+    flex: 1 1 auto;
+    display: block;
+    @media #{$medium} {
+      display: inline-block;
+      margin-right: 1rem;
+      width: calc(100% - 15rem);
+    }
+
+  }
+  .f6 {
+    display: block;
+    @media #{$medium} {
+      display: inline-block;
+      vertical-align: top;
+      transform: translateY(.5rem);
+    }
+    background: url(../img/f6.png) no-repeat 0 0;
+    background-size: contain;
+    width: 13.2rem;
+    height: 2.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 14rem;
+  }
+}

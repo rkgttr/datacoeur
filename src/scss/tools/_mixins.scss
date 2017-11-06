@@ -1,0 +1,121 @@
+// mixins
+@mixin fluid-type($properties: font-size, $min-value: $min-global-font-size, $max-value: $max-global-font-size, $min-vw: 20em, $max-vw: 64em) {
+  $min-value: $min-value / 2;
+  $max-value: $max-value / 2;
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+
+    @media screen and (min-width: $min-vw) {
+      $minvw: px($min-vw);
+      $maxvw: px($max-vw);
+      @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$minvw}px) / #{$maxvw - $minvw}));
+      }
+    }
+
+    @media screen and (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function px($em) {
+  @return #{strip-unit($em) * 16};
+}
+
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+
+@mixin hide-text($height: null) {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+
+  @if $height {
+    @warn "The `hide-text` mixin has changed and no longer requires a height. The height argument will no longer be accepted in v5.0.0";
+  }
+}
+
+// grid system
+// grid rows should extend %grid-row
+
+%grid-row {
+  letter-spacing: -0.31em;
+  
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+%grid-unit {
+  display: inline-block;
+  letter-spacing: normal;
+  
+  vertical-align: top;
+  text-rendering: auto;
+  font-family: $global-font;
+}
+/*
+example:
+.myDiv {
+  @include unit(1, 1/2, $medium, 1/3, $large) {
+    // other properties
+  }
+}
+will output a 100% width div for mobiles, 50% width div for medium width device, 33.333% width div for large width devices
+We can ommit the mediaqueries and have only one arguments such as @include unit(1/2) {}
+ */
+
+
+@mixin unit($base, $mqs...){
+  @extend %grid-unit;
+  width: $base * 100%;
+  $i: 1;
+  @while $i <= length($mqs) {
+    @media #{nth($mqs, $i+1)} {
+      width: nth($mqs, $i) * 100%;
+    }
+    $i: $i + 2;
+  }
+  @content;
+}
+
+
+// placeholders
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}

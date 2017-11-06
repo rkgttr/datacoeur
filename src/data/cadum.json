@@ -1,0 +1,455 @@
+[
+  [
+    {
+      "axis": "confiance",
+      "value": 78032,
+      "profil": [
+        {
+          "title": "Genre",
+          "values": [
+            {
+              "label": "Hommes",
+              "value": 65
+            },{
+              "label": "Femmes",
+              "value": 35
+            }
+          ]
+        },{
+          "title": "Ages",
+          "values": [
+            {
+              "label": "0-20",
+              "value": 5
+            },{
+              "label": "21-30",
+              "value": 35
+            },{
+              "label": "31-40",
+              "value": 20
+            },{
+              "label": "41-55",
+              "value": 10
+            },{
+              "label": "56-100",
+              "value": 30
+            }
+          ]
+        },{
+          "title": "Contexte urbain",
+          "values": [
+            {
+              "label": "Urbain",
+              "value": 65
+            },{
+              "label": "Banlieue",
+              "value": 20
+            },{
+              "label": "Campagne",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "syntagmes": [
+        { "syntagme": "vraiment bien", "weight": 888 },
+        { "syntagme": "je recommande", "weight": 234 }
+      ]
+    },
+    {
+      "axis": "peur",
+      "value": 34032,
+      "profil": [
+        {
+          "title": "Genre",
+          "values": [
+            {
+              "label": "Hommes",
+              "value": 65
+            },{
+              "label": "Femmes",
+              "value": 35
+            }
+          ]
+        },{
+          "title": "Ages",
+          "values": [
+            {
+              "label": "0-20",
+              "value": 5
+            },{
+              "label": "21-30",
+              "value": 35
+            },{
+              "label": "31-40",
+              "value": 20
+            },{
+              "label": "41-55",
+              "value": 10
+            },{
+              "label": "56-100",
+              "value": 30
+            }
+          ]
+        },{
+          "title": "Contexte urbain",
+          "values": [
+            {
+              "label": "Urbain",
+              "value": 65
+            },{
+              "label": "Banlieue",
+              "value": 20
+            },{
+              "label": "Campagne",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "syntagmes": [
+        { "syntagme": "produits cosmétiques contenant des ingrédients indésirables", "weight": 888 },
+        { "syntagme": "substances préoccupantes", "weight": 234 },
+        { "syntagme": "😥", "weight": 400 },
+        { "syntagme": "Quand on voit les ingrédients de ses produits ça fait peur de mettre ça sur la peau de bébé", "weight": 334 }
+      ]
+    },
+    {
+      "axis": "surprise",
+      "value": 10034,
+      "profil": [
+        {
+          "title": "Genre",
+          "values": [
+            {
+              "label": "Hommes",
+              "value": 65
+            },{
+              "label": "Femmes",
+              "value": 35
+            }
+          ]
+        },{
+          "title": "Ages",
+          "values": [
+            {
+              "label": "0-20",
+              "value": 5
+            },{
+              "label": "21-30",
+              "value": 35
+            },{
+              "label": "31-40",
+              "value": 20
+            },{
+              "label": "41-55",
+              "value": 10
+            },{
+              "label": "56-100",
+              "value": 30
+            }
+          ]
+        },{
+          "title": "Contexte urbain",
+          "values": [
+            {
+              "label": "Urbain",
+              "value": 65
+            },{
+              "label": "Banlieue",
+              "value": 20
+            },{
+              "label": "Campagne",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "syntagmes": [
+        { "syntagme": "je les croyais pas si bien", "weight": 888 },
+        { "syntagme": "prix imbattable chez le pharma", "weight": 234 }
+      ]
+    },
+    {
+      "axis": "tristesse",
+      "value": 20432,
+      "profil": [
+        {
+          "title": "Genre",
+          "values": [
+            {
+              "label": "Hommes",
+              "value": 65
+            },{
+              "label": "Femmes",
+              "value": 35
+            }
+          ]
+        },{
+          "title": "Ages",
+          "values": [
+            {
+              "label": "0-20",
+              "value": 5
+            },{
+              "label": "21-30",
+              "value": 35
+            },{
+              "label": "31-40",
+              "value": 20
+            },{
+              "label": "41-55",
+              "value": 10
+            },{
+              "label": "56-100",
+              "value": 30
+            }
+          ]
+        },{
+          "title": "Contexte urbain",
+          "values": [
+            {
+              "label": "Urbain",
+              "value": 65
+            },{
+              "label": "Banlieue",
+              "value": 20
+            },{
+              "label": "Campagne",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "syntagmes": [
+        { "syntagme": "j'en trouve plus", "weight": 500 },
+        { "syntagme": "bouh mon enfance", "weight": 120 }
+      ]
+    },
+    {
+      "axis": "dégoût",
+      "value": 12543,
+      "profil": [
+        {
+          "title": "Genre",
+          "values": [
+            {
+              "label": "Hommes",
+              "value": 65
+            },{
+              "label": "Femmes",
+              "value": 35
+            }
+          ]
+        },{
+          "title": "Ages",
+          "values": [
+            {
+              "label": "0-20",
+              "value": 5
+            },{
+              "label": "21-30",
+              "value": 35
+            },{
+              "label": "31-40",
+              "value": 20
+            },{
+              "label": "41-55",
+              "value": 10
+            },{
+              "label": "56-100",
+              "value": 30
+            }
+          ]
+        },{
+          "title": "Contexte urbain",
+          "values": [
+            {
+              "label": "Urbain",
+              "value": 65
+            },{
+              "label": "Banlieue",
+              "value": 20
+            },{
+              "label": "Campagne",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "syntagmes": [
+        { "syntagme": "ça accroche la peau", "weight": 1 }
+      ]
+    },
+    {
+      "axis": "colère",
+      "value": 32387,
+      "profil": [
+        {
+          "title": "Genre",
+          "values": [
+            {
+              "label": "Hommes",
+              "value": 65
+            },{
+              "label": "Femmes",
+              "value": 35
+            }
+          ]
+        },{
+          "title": "Ages",
+          "values": [
+            {
+              "label": "0-20",
+              "value": 5
+            },{
+              "label": "21-30",
+              "value": 35
+            },{
+              "label": "31-40",
+              "value": 20
+            },{
+              "label": "41-55",
+              "value": 10
+            },{
+              "label": "56-100",
+              "value": 30
+            }
+          ]
+        },{
+          "title": "Contexte urbain",
+          "values": [
+            {
+              "label": "Urbain",
+              "value": 65
+            },{
+              "label": "Banlieue",
+              "value": 20
+            },{
+              "label": "Campagne",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "syntagmes": [
+        { "syntagme": "😡😡😡", "weight": 200 },
+        { "syntagme": "allergies", "weight": 190 }
+      ]
+    },
+    {
+      "axis": "anticipation",
+      "value": 40654,
+      "profil": [
+        {
+          "title": "Genre",
+          "values": [
+            {
+              "label": "Hommes",
+              "value": 65
+            },{
+              "label": "Femmes",
+              "value": 35
+            }
+          ]
+        },{
+          "title": "Ages",
+          "values": [
+            {
+              "label": "0-20",
+              "value": 5
+            },{
+              "label": "21-30",
+              "value": 35
+            },{
+              "label": "31-40",
+              "value": 20
+            },{
+              "label": "41-55",
+              "value": 10
+            },{
+              "label": "56-100",
+              "value": 30
+            }
+          ]
+        },{
+          "title": "Contexte urbain",
+          "values": [
+            {
+              "label": "Urbain",
+              "value": 65
+            },{
+              "label": "Banlieue",
+              "value": 20
+            },{
+              "label": "Campagne",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "syntagmes": [
+        { "syntagme": "nouvelles lingettes ?", "weight": 20 },
+        { "syntagme": "nouveaux parfums", "weight": 19 }
+      ]
+    },
+    {
+      "axis": "joie",
+      "value": 94562,
+      "profil": [
+        {
+          "title": "Genre",
+          "values": [
+            {
+              "label": "Hommes",
+              "value": 65
+            },{
+              "label": "Femmes",
+              "value": 35
+            }
+          ]
+        },{
+          "title": "Ages",
+          "values": [
+            {
+              "label": "0-20",
+              "value": 5
+            },{
+              "label": "21-30",
+              "value": 35
+            },{
+              "label": "31-40",
+              "value": 20
+            },{
+              "label": "41-55",
+              "value": 10
+            },{
+              "label": "56-100",
+              "value": 30
+            }
+          ]
+        },{
+          "title": "Contexte urbain",
+          "values": [
+            {
+              "label": "Urbain",
+              "value": 65
+            },{
+              "label": "Banlieue",
+              "value": 20
+            },{
+              "label": "Campagne",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "syntagmes": [
+        { "syntagme": "son odeur me ravit ", "weight": 888 },
+        { "syntagme": "j'adore", "weight": 234 },
+        { "syntagme": "waouh tout doux", "weight": 100 }
+      ]
+    }
+
+  ]
+]

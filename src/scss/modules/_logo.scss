@@ -1,0 +1,17 @@
+.logo {
+  width: 11.2rem;
+  height: 6.8rem;
+  overflow: hidden;
+  text-indent: 12rem;
+  white-space: nowrap;
+  background: url(../img/logo.svg) no-repeat 0 0;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  &.clickable {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}

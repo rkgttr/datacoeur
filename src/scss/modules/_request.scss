@@ -1,0 +1,222 @@
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.request {
+  width: 100%;
+  color: $white;
+
+  @media #{$medium} {
+    width: 75%;
+  }
+  @media #{$large} {
+    width: 50%;
+  }
+  &.hide {
+    animation: hide .35s ease forwards;
+  }
+  &.hidden {
+    display: none;
+    animation: none;
+  }
+  &.show {
+    animation: show .3s ease forwards;
+  }
+  padding: 0 3rem 3rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 auto;
+  min-height: calc(100vh - 12.8rem);
+  &-key {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  input[type=text] {
+    -webkit-appearance: none;
+    font-size: 4rem;
+    line-height: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @include plumber-box( $padding: 2, $margin: 0 1, $border: 4px );
+    width: 100%;
+    background: transparent;
+    border: 4px solid $white;
+    transition: box-shadow 0.3s ease;
+
+    &:focus {
+      box-shadow: 0 0 1rem $white;
+      outline: none;
+    }
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba($white, .7);
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: rgba($white, .7);
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: rgba($white, .7);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: rgba($white, .7);
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    @extend %visuallyhidden;
+  }
+
+  button[type=submit] {
+    font-size: 4rem;
+    line-height: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: $primary-light;
+    font-weight: 700;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+    @include plumber-box( $padding: 2, $margin: 0 1, $border: 4px );
+    background: $white;
+    border: 4px solid $white;
+
+    &:focus {
+      box-shadow: 0 0 1rem $white;
+      outline: none;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  h2 {
+    width: 100%;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 700;
+    @include plumber($font-size: 2, $leading-top: 3, $leading-bottom: 1, $baseline: $header-baseline);
+  }
+
+  .timerange {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  label {
+    display: block;
+
+    &.keyword {
+      @include plumber($font-size: 2, $leading-top: 3, $leading-bottom: 1, $baseline: $header-baseline);
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 700;
+    }
+  }
+
+  input[type=radio] {
+    + label {
+      text-align: center;
+      flex: 1 1 auto;
+      cursor: pointer;
+
+      &:before {
+        height: 0.5rem;
+        width: 100%;
+        content: '';
+        background: $white;
+        position: absolute;
+        left: 0;
+        bottom: -2.25rem;
+      }
+
+      &:after {
+        display: block;
+        content: '';
+        width: 1em;
+        height: 1em;
+        border-radius: 0.5em;
+        border: 1px solid $white;
+        background: $white;
+        position: absolute;
+        bottom: -3rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: box-shadow 0.3s ease, background-color 0.3s ease;
+      }
+    }
+
+    &:focus {
+      + label:after {
+        box-shadow: 0 0 3rem $white;
+      }
+    }
+
+    &:checked {
+      + label:after {
+        background: $primary-light;
+      }
+    }
+  }
+
+  input[type=checkbox] {
+    + label {
+      width: 50%;
+      margin-bottom: 1em;
+      cursor: pointer;
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 1rem;
+        transform: translateY(.1em);
+        width: 1em;
+        height: 1em;
+        background: $white;
+        border-radius: .2em;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: .5em;
+        left: .3em;
+        width: .5em;
+        height: .3em;
+        border-left: 1px solid $primary-light;
+        border-bottom: 1px solid $primary-light;
+        transform: scale(.001);
+        transition: transform .2s ease;
+      }
+    }
+    &:focus {
+      + label:before {
+        box-shadow: 0 0 3rem $white;
+      }
+    }
+    &:checked {
+      + label:after {
+        transform: scale(1) rotate(-45deg);
+      }
+    }
+  }
+
+  .datasource {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@keyframes hide {
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes show {
+  from {
+    transform: scale(0);
+  }
+}

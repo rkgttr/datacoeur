@@ -1,0 +1,81 @@
+// colours
+$black: #221d1d;
+$dark: #463c3d;
+$light: #d0c8c9;
+$white: #faf9f9;
+
+$primary: #C52C3E;
+$primary-light: #FF5C6A;
+$secondary: #79efdc;
+$ternary: #F1FE8B;
+
+
+$focus-color: #129FEA;
+$input-error: #e9322d;
+$input-border-color: #ccc;
+$input-disabled-background-color: #eaeded;
+$input-disabled-color: #cad2d3;
+$input-readonly-background-color: #eee;
+$input-readonly-color: #777;
+$legend-color: #333;
+$legend-border-bottom-color: #e5e5e5;
+$pre-background: #e7e7e7;
+$pre-border: #cbcbcb;
+
+
+$table-border-color: #cbcbcb;
+$thead-background-color: #e0e0e0;
+$tr-striped-odd-background-color: #f2f2f2;
+
+
+$button-color: #444;
+$button-border-color: #999;
+$button-background-color: #e6e6e6;
+$button-hover-focus-background-color: #d3d3d3;
+
+
+$modal-overlay-background: rgba($black, .5);
+$modal-background: #fefefe;
+$modal-shadow-color: rgba($black, .75);
+
+
+$tooltip-color: #444;
+$tooltip-background-color: #666;
+$tooltip-content-color: #fff;
+
+// Typography
+$global-font: 'Lato', sans-serif;;
+$global-baseline: 0.113000; // baseline of your font, calculate it here: https://jamonserrano.github.io/plumber-sass/measure/
+$header-font: 'Lato', sans-serif;;
+$header-baseline: 0.113000; // baseline of your font, calculate it here: https://jamonserrano.github.io/plumber-sass/measure/
+$monospace-font: Consolas, monaco, monospace;
+$monospace-baseline: 0.166; // baseline of your font, calculate it here: https://jamonserrano.github.io/plumber-sass/measure/
+$min-global-font-size: 14px;
+$max-global-font-size: 20px;
+
+
+// breakpoints
+$landscape: 'only screen and (orientation: landscape) and (max-width:48em)';
+$medium: 'only screen and (min-width:48em)';
+$large: 'only screen and (min-width:64em)';
+$xlarge: 'only screen and (min-width:96em)';
+
+// max width of content:
+$max-width: 120rem; // ($max-global-font-size / 2) * 120, adjust to your liking
+
+
+
+// forms
+$input-border-radius: 2px;
+
+
+// buttons
+$button-border-radius: 2px;
+
+
+// modal
+$modal-border-radius: 2px;
+
+
+// tooltip
+$tooltip-border-radius: 2px;

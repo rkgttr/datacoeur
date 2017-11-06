@@ -1,0 +1,132 @@
+.details {
+  display: none;
+  width: 100%;
+  color: $white;
+  padding: 0 3rem 3rem;
+  margin: 0 auto;
+
+  &.shown {
+    min-height: calc(100vh - 12.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+    animation: showDetails 0.3s ease forwards;
+  }
+
+  &.hide {
+    animation: hideDetails 0.3s ease forwards;
+  }
+
+  sub {
+    bottom: 0;
+    font-size: 0.4em;
+  }
+
+  h2 {
+    @include plumber($font-size: 7, $line-height: 8, $leading-top: 5, $leading-bottom: 4, $baseline: $header-baseline);
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-weight: 700;
+  }
+
+  .cloud {
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    @media #{$medium} {
+      width: 50%;
+      padding-top: 50%;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .bubble-label {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    position: static;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5em;
+    line-height: 1.1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bar {
+    fill: $primary-light;
+  }
+
+  .graphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .detail-graph {
+    flex: 0 1 100%;
+    @media #{$medium} {
+      flex: 0 1 50%;
+    }
+    @media #{$large} {
+      flex: 0 1 33%;
+    }
+  }
+
+  .graphs text {
+    font-size: 1.5em;
+  }
+
+  .detail {
+    height: 0;
+    width: 100%;
+    padding-top: 66%;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .domain,
+  line {
+    stroke: $white;
+  }
+
+  .axis text {
+    fill: $white;
+  }
+}
+@keyframes showDetails {
+  from {
+    transform: scale(.001);
+  }
+}
+@keyframes hideDetails {
+  to {
+    transform: scale(.001);
+  }
+}

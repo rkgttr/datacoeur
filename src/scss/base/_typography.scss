@@ -1,0 +1,103 @@
+body {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 300;
+}
+text {
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+dl,
+ol,
+ul {
+  @include plumber-box( $margin: 2 3);
+}
+
+dd,
+dt,
+li {
+  @include plumber( $leading-bottom: 1);
+}
+
+address,
+caption,
+ins,
+p {
+  @include plumber();
+}
+
+pre {
+  @include plumber( $font-size: 1.8, $baseline: $monospace-baseline);
+
+  > code {
+    @include plumber-box( $padding: 2 );
+    padding-left: 2rem;
+    border-left: 0.5rem solid $pre-border;
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+code {
+  background: $pre-background;
+  font-family: $monospace-font;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 4;
+  hyphens: none;
+}
+
+blockquote {
+  margin: 0 4rem;
+  @include plumber($font-size: 2.5, $leading-top: 2, $leading-bottom: 2, $line-height: 4);
+  font-style: italic;
+}
+
+cite {
+  display: block;
+  margin: 0 6rem;
+  @include plumber($font-size: 1.8, $leading-bottom: 2, $leading-top: -1);
+  font-weight: 700;
+  font-style: normal;
+}
+
+figcaption {
+  @include plumber( $font-size: 1.6, $leading-top: -1);
+}
+
+h1 {
+  font-family: $header-font;
+  @include plumber($font-size: 5, $line-height: 6, $leading-top: 5, $leading-bottom: 4, $baseline: $header-baseline);
+}
+
+h2 {
+  font-family: $header-font;
+  @include plumber($font-size: 4, $line-height: 5, $leading-top: 6, $baseline: $header-baseline);
+}
+
+h3 {
+  font-family: $header-font;
+  @include plumber($font-size: 3, $leading-top: 5, $line-height: 4, $baseline: $header-baseline);
+}
+
+h4 {
+  font-family: $header-font;
+  @include plumber($font-size: 2.5, $leading-top: 4, $baseline: $header-baseline);
+}
+
+h5 {
+  font-family: $header-font;
+  @include plumber($font-size: 2.2, $leading-top: 3, $baseline: $header-baseline);
+}
